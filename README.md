@@ -2,24 +2,21 @@
 
 Este repositório contém minhas anotações e trabalhos desenvolvidos durante a pós-graduação "GoExpert" da Full Cycle.
 
-## Importante: Este projeto utiliza Go, não Python!
+## Estrutura do Projeto
 
-Apesar de usar notebooks Jupyter (normalmente associados a Python), todos os códigos e exemplos neste repositório são implementados em **Go**.
+O projeto está organizado da seguinte forma:
 
-## Como usar os notebooks
+- `modules/`: Contém exercícios e exemplos de código organizados por módulos
+- `projects/`: Projetos maiores desenvolvidos durante o curso
 
-Os notebooks Jupyter com Go são executados usando o kernel **GopherNotes**, que permite escrever e executar código Go diretamente nos notebooks;
+## Como usar
 
-1. Inicie o Dev Container do projeto (isso configurará automaticamente o ambiente Go e o servidor Jupyter)
-
-2. Acesse o Jupyter Notebook através do IP do servidor Jupyter que foi inicializado localmente:
-   ```
-   http://gophernotes:8888?token=.
-   ```
-
-3. Navegue até a pasta `modules/` para acessar os notebooks com anotações e exemplos de código Go.
+1. Clone este repositório
+2. Utilize o Dev Container incluso para garantir o ambiente correto com a versão adequada do Go e todas as dependências necessárias
+3. Navegue até a pasta desejada
+4. Execute os arquivos Go usando o comando `go run`
 
 ## Recursos úteis
 
-- [Gophernotes - Kernel Go para Jupyter](https://github.com/gopherdata/gophernotes)
+- [Documentação oficial do Go](https://golang.org/doc/)
 - [GoExpert (Full Cycle)](https://goexpert.fullcycle.com.br/)

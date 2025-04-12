@@ -12,9 +12,11 @@
 		"vscode": {
 			"extensions": [
 				"ms-azuretools.vscode-docker",
-				"ms-toolsai.jupyter",
 				"golang.Go"
-			]
+			],
+			"settings": {
+				"go.toolsManagement.autoUpdate": true
+			}
 		}
 	}
 }
