@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {{ template "header.html" }}
+    <h1>Pedidos!</h1>
+
+    Prezado {{ .Pessoa.Nome }},<br>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Valor</th>
+                <th>Data</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{ range .Pedidos }}
+            {{ if eq .Produto "Cerveja" }}
+            <tr style="background-color: #ccb035;">
+                {{ else }}
+            <tr>
+                {{ end }}
+                <td>{{ .Produto | Upper }}</td>
+                <td>{{ .Quantidade }}</td>
+                <td>{{ .Valor }}</td>
+                <td>{{ .Data }}</td>
+            </tr>
+            {{ end }}
+        </tbody>
+    </table>
+</body>
+
+</html>
