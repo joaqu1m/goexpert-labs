@@ -12,7 +12,8 @@
 		"vscode": {
 			"extensions": [
 				"ms-azuretools.vscode-docker",
-				"golang.Go"
+				"golang.Go",
+				"humao.rest-client"
 			],
 			"settings": {
 				"go.toolsManagement.autoUpdate": true
