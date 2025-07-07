@@ -7,13 +7,10 @@ import (
 	"time"
 )
 
-// https://brasilapi.com.br/api/cep/v1/01153000 + 01001000
-// http://viacep.com.br/ws/" + 01001000 + "/json/
-
-func fetchAndChannelize(url string, ch chan<- map[string]interface{}) {
+func fetchAndChannelize(url string, ch chan<- map[string]any) {
 	resp, err := http.Get(url)
 	if err != nil {
-		return // ou log.Println("erro na requisição:", err)
+		return
 	}
 	defer resp.Body.Close()
 
@@ -21,7 +18,7 @@ func fetchAndChannelize(url string, ch chan<- map[string]interface{}) {
 		return
 	}
 
-	var body map[string]interface{}
+	var body map[string]any
 	if err := json.NewDecoder(resp.Body).Decode(&body); err != nil {
 		return
 	}
@@ -33,8 +30,8 @@ func main() {
 
 	cep := "01001000"
 
-	ch1 := make(chan map[string]interface{})
-	ch2 := make(chan map[string]interface{})
+	ch1 := make(chan map[string]any)
+	ch2 := make(chan map[string]any)
 
 	go fetchAndChannelize(fmt.Sprintf("https://brasilapi.com.br/api/cep/v1/%s", cep), ch1)
 	go fetchAndChannelize(fmt.Sprintf("http://viacep.com.br/ws/%s/json/", cep), ch2)
