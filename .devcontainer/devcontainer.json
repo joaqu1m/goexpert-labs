@@ -12,7 +12,8 @@
 			"extensions": [
 				"ms-azuretools.vscode-docker",
 				"golang.Go",
-				"humao.rest-client"
+				"humao.rest-client",
+				"GraphQL.vscode-graphql"
 			],
 			"settings": {
 				"go.toolsManagement.autoUpdate": true
