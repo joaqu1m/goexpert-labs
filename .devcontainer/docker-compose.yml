@@ -7,3 +7,14 @@ services:
     volumes:
       - ../..:/workspaces:cached
     command: sleep infinity
+  rabbitmq:
+    container_name: goexpert-labs-rabbitmq
+    image: rabbitmq:3.11-management
+    hostname: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+      - "15692:15692"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
