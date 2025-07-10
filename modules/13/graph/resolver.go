@@ -1,6 +1,6 @@
 package graph
 
-import "github.com/joaqu1m/goexpert-labs/modules/12/internal/database"
+import "github.com/joaqu1m/goexpert-labs/modules/13/internal/database"
 
 // This file will not be regenerated automatically.
 //

@@ -7,7 +7,7 @@ package graph
 import (
 	"context"
 
-	"github.com/joaqu1m/goexpert-labs/modules/12/graph/model"
+	"github.com/joaqu1m/goexpert-labs/modules/13/graph/model"
 )
 
 // CreateCategory is the resolver for the createCategory field.

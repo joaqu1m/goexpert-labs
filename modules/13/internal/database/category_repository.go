@@ -4,7 +4,7 @@ import (
 	"database/sql"
 
 	"github.com/google/uuid"
-	"github.com/joaqu1m/goexpert-labs/modules/12/graph/model"
+	"github.com/joaqu1m/goexpert-labs/modules/13/graph/model"
 )
 
 type CategoryRepository struct {

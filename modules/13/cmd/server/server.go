@@ -11,8 +11,8 @@ import (
 	"github.com/99designs/gqlgen/graphql/handler/lru"
 	"github.com/99designs/gqlgen/graphql/handler/transport"
 	"github.com/99designs/gqlgen/graphql/playground"
-	"github.com/joaqu1m/goexpert-labs/modules/12/graph"
-	"github.com/joaqu1m/goexpert-labs/modules/12/internal/database"
+	"github.com/joaqu1m/goexpert-labs/modules/13/graph"
+	"github.com/joaqu1m/goexpert-labs/modules/13/internal/database"
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/vektah/gqlparser/v2/ast"
 )

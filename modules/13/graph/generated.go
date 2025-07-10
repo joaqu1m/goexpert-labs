@@ -14,7 +14,7 @@ import (
 
 	"github.com/99designs/gqlgen/graphql"
 	"github.com/99designs/gqlgen/graphql/introspection"
-	"github.com/joaqu1m/goexpert-labs/modules/12/graph/model"
+	"github.com/joaqu1m/goexpert-labs/modules/13/graph/model"
 	gqlparser "github.com/vektah/gqlparser/v2"
 	"github.com/vektah/gqlparser/v2/ast"
 )
@@ -336,7 +336,7 @@ func (ec *executionContext) field_Mutation_createCategory_argsInput(
 ) (model.CategoryInput, error) {
 	ctx = graphql.WithPathContext(ctx, graphql.NewPathWithField("input"))
 	if tmp, ok := rawArgs["input"]; ok {
-		return ec.unmarshalNCategoryInput2githubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ12ᚋgraphᚋmodelᚐCategoryInput(ctx, tmp)
+		return ec.unmarshalNCategoryInput2githubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ13ᚋgraphᚋmodelᚐCategoryInput(ctx, tmp)
 	}
 
 	var zeroVal model.CategoryInput
@@ -359,7 +359,7 @@ func (ec *executionContext) field_Mutation_createCourse_argsInput(
 ) (model.CourseInput, error) {
 	ctx = graphql.WithPathContext(ctx, graphql.NewPathWithField("input"))
 	if tmp, ok := rawArgs["input"]; ok {
-		return ec.unmarshalNCourseInput2githubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ12ᚋgraphᚋmodelᚐCourseInput(ctx, tmp)
+		return ec.unmarshalNCourseInput2githubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ13ᚋgraphᚋmodelᚐCourseInput(ctx, tmp)
 	}
 
 	var zeroVal model.CourseInput
@@ -646,7 +646,7 @@ func (ec *executionContext) _Category_courses(ctx context.Context, field graphql
 	}
 	res := resTmp.([]*model.Course)
 	fc.Result = res
-	return ec.marshalNCourse2ᚕᚖgithubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ12ᚋgraphᚋmodelᚐCourseᚄ(ctx, field.Selections, res)
+	return ec.marshalNCourse2ᚕᚖgithubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ13ᚋgraphᚋmodelᚐCourseᚄ(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Category_courses(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -829,7 +829,7 @@ func (ec *executionContext) _Course_category(ctx context.Context, field graphql.
 	}
 	res := resTmp.(*model.Category)
 	fc.Result = res
-	return ec.marshalNCategory2ᚖgithubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ12ᚋgraphᚋmodelᚐCategory(ctx, field.Selections, res)
+	return ec.marshalNCategory2ᚖgithubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ13ᚋgraphᚋmodelᚐCategory(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Course_category(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -883,7 +883,7 @@ func (ec *executionContext) _Mutation_createCategory(ctx context.Context, field 
 	}
 	res := resTmp.(*model.Category)
 	fc.Result = res
-	return ec.marshalNCategory2ᚖgithubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ12ᚋgraphᚋmodelᚐCategory(ctx, field.Selections, res)
+	return ec.marshalNCategory2ᚖgithubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ13ᚋgraphᚋmodelᚐCategory(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Mutation_createCategory(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -948,7 +948,7 @@ func (ec *executionContext) _Mutation_createCourse(ctx context.Context, field gr
 	}
 	res := resTmp.(*model.Course)
 	fc.Result = res
-	return ec.marshalNCourse2ᚖgithubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ12ᚋgraphᚋmodelᚐCourse(ctx, field.Selections, res)
+	return ec.marshalNCourse2ᚖgithubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ13ᚋgraphᚋmodelᚐCourse(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Mutation_createCourse(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1013,7 +1013,7 @@ func (ec *executionContext) _Query_categories(ctx context.Context, field graphql
 	}
 	res := resTmp.([]*model.Category)
 	fc.Result = res
-	return ec.marshalNCategory2ᚕᚖgithubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ12ᚋgraphᚋmodelᚐCategoryᚄ(ctx, field.Selections, res)
+	return ec.marshalNCategory2ᚕᚖgithubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ13ᚋgraphᚋmodelᚐCategoryᚄ(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Query_categories(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1067,7 +1067,7 @@ func (ec *executionContext) _Query_courses(ctx context.Context, field graphql.Co
 	}
 	res := resTmp.([]*model.Course)
 	fc.Result = res
-	return ec.marshalNCourse2ᚕᚖgithubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ12ᚋgraphᚋmodelᚐCourseᚄ(ctx, field.Selections, res)
+	return ec.marshalNCourse2ᚕᚖgithubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ13ᚋgraphᚋmodelᚐCourseᚄ(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Query_courses(_ context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -3861,11 +3861,11 @@ func (ec *executionContext) marshalNBoolean2bool(ctx context.Context, sel ast.Se
 	return res
 }
 
-func (ec *executionContext) marshalNCategory2githubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ12ᚋgraphᚋmodelᚐCategory(ctx context.Context, sel ast.SelectionSet, v model.Category) graphql.Marshaler {
+func (ec *executionContext) marshalNCategory2githubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ13ᚋgraphᚋmodelᚐCategory(ctx context.Context, sel ast.SelectionSet, v model.Category) graphql.Marshaler {
 	return ec._Category(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNCategory2ᚕᚖgithubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ12ᚋgraphᚋmodelᚐCategoryᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.Category) graphql.Marshaler {
+func (ec *executionContext) marshalNCategory2ᚕᚖgithubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ13ᚋgraphᚋmodelᚐCategoryᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.Category) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -3889,7 +3889,7 @@ func (ec *executionContext) marshalNCategory2ᚕᚖgithubᚗcomᚋjoaqu1mᚋgoex
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNCategory2ᚖgithubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ12ᚋgraphᚋmodelᚐCategory(ctx, sel, v[i])
+			ret[i] = ec.marshalNCategory2ᚖgithubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ13ᚋgraphᚋmodelᚐCategory(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -3909,7 +3909,7 @@ func (ec *executionContext) marshalNCategory2ᚕᚖgithubᚗcomᚋjoaqu1mᚋgoex
 	return ret
 }
 
-func (ec *executionContext) marshalNCategory2ᚖgithubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ12ᚋgraphᚋmodelᚐCategory(ctx context.Context, sel ast.SelectionSet, v *model.Category) graphql.Marshaler {
+func (ec *executionContext) marshalNCategory2ᚖgithubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ13ᚋgraphᚋmodelᚐCategory(ctx context.Context, sel ast.SelectionSet, v *model.Category) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
@@ -3919,16 +3919,16 @@ func (ec *executionContext) marshalNCategory2ᚖgithubᚗcomᚋjoaqu1mᚋgoexper
 	return ec._Category(ctx, sel, v)
 }
 
-func (ec *executionContext) unmarshalNCategoryInput2githubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ12ᚋgraphᚋmodelᚐCategoryInput(ctx context.Context, v any) (model.CategoryInput, error) {
+func (ec *executionContext) unmarshalNCategoryInput2githubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ13ᚋgraphᚋmodelᚐCategoryInput(ctx context.Context, v any) (model.CategoryInput, error) {
 	res, err := ec.unmarshalInputCategoryInput(ctx, v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalNCourse2githubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ12ᚋgraphᚋmodelᚐCourse(ctx context.Context, sel ast.SelectionSet, v model.Course) graphql.Marshaler {
+func (ec *executionContext) marshalNCourse2githubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ13ᚋgraphᚋmodelᚐCourse(ctx context.Context, sel ast.SelectionSet, v model.Course) graphql.Marshaler {
 	return ec._Course(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNCourse2ᚕᚖgithubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ12ᚋgraphᚋmodelᚐCourseᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.Course) graphql.Marshaler {
+func (ec *executionContext) marshalNCourse2ᚕᚖgithubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ13ᚋgraphᚋmodelᚐCourseᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.Course) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -3952,7 +3952,7 @@ func (ec *executionContext) marshalNCourse2ᚕᚖgithubᚗcomᚋjoaqu1mᚋgoexpe
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNCourse2ᚖgithubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ12ᚋgraphᚋmodelᚐCourse(ctx, sel, v[i])
+			ret[i] = ec.marshalNCourse2ᚖgithubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ13ᚋgraphᚋmodelᚐCourse(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -3972,7 +3972,7 @@ func (ec *executionContext) marshalNCourse2ᚕᚖgithubᚗcomᚋjoaqu1mᚋgoexpe
 	return ret
 }
 
-func (ec *executionContext) marshalNCourse2ᚖgithubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ12ᚋgraphᚋmodelᚐCourse(ctx context.Context, sel ast.SelectionSet, v *model.Course) graphql.Marshaler {
+func (ec *executionContext) marshalNCourse2ᚖgithubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ13ᚋgraphᚋmodelᚐCourse(ctx context.Context, sel ast.SelectionSet, v *model.Course) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
@@ -3982,7 +3982,7 @@ func (ec *executionContext) marshalNCourse2ᚖgithubᚗcomᚋjoaqu1mᚋgoexpert�
 	return ec._Course(ctx, sel, v)
 }
 
-func (ec *executionContext) unmarshalNCourseInput2githubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ12ᚋgraphᚋmodelᚐCourseInput(ctx context.Context, v any) (model.CourseInput, error) {
+func (ec *executionContext) unmarshalNCourseInput2githubᚗcomᚋjoaqu1mᚋgoexpertᚑlabsᚋmodulesᚋ13ᚋgraphᚋmodelᚐCourseInput(ctx context.Context, v any) (model.CourseInput, error) {
 	res, err := ec.unmarshalInputCourseInput(ctx, v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }
