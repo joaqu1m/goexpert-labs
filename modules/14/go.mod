@@ -4,7 +4,6 @@ go 1.24.5
 
 require (
 	github.com/google/uuid v1.6.0
-	github.com/joaqu1m/goexpert-labs/modules/13 v0.0.0-20250710221849-7f3b5b385a14
 	github.com/mattn/go-sqlite3 v1.14.28
 	google.golang.org/grpc v1.73.0
 	google.golang.org/protobuf v1.36.6
