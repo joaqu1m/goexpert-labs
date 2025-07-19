@@ -4,4 +4,5 @@ RUN apt update -y && \
     apt upgrade -y && \
     apt install -y \
     protobuf-compiler \
-    sqlite3
+    sqlite3 \
+    default-mysql-client
