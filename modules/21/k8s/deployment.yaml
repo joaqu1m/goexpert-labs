@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: server
+  template:
+    metadata:
+      labels:
+        app: server
+    spec:
+      containers:
+      - name: server
+        image: 21:latest
+        imagePullPolicy: Never
+        resources:
+          limits:
+            memory: "32Mi"
+            cpu: "100m"
+
+        # startup probe
+        # to ensure the application is ready before traffic is sent
+        # periodSeconds: interval between each probe
+        # failureThreshold: number of consecutive failures before marking the pod as failed
+        startupProbe:
+          httpGet:
+            # normally, we would create a health endpoint in the application just for this
+            path: /
+            port: 8080
+          periodSeconds: 10
+          failureThreshold: 10
+
+        # readiness probe
+        # to ensure the application is ready to serve traffic
+        # timeoutSeconds: time to wait for the probe to succeed
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          periodSeconds: 10
+          failureThreshold: 2
+          timeoutSeconds: 5
+
+        # liveness probe
+        # to ensure the application is still running
+        # successThreshold: number of consecutive successes before marking the pod as healthy
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          periodSeconds: 10
+          failureThreshold: 3
+          timeoutSeconds: 5
+          successThreshold: 1
+
+        ports:
+        - containerPort: 8080
