@@ -1,0 +1,5 @@
+GET http://localhost:8080/books/1 HTTP/1.1
+###
+
+GET http://localhost:8080/books/dir/my-directory HTTP/1.1
+###
