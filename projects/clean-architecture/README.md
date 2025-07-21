@@ -7,10 +7,6 @@ docker-compose up -d
 ```
 
 ```bash
-migrate -path=sql/migrations -database "mysql://root:root@tcp(localhost:3306)/orders" -verbose up
-```
-
-```bash
 go mod tidy
 ```
 
