@@ -9,6 +9,7 @@ services:
       MYSQL_DATABASE: orders
     ports:
       - "3306:3306"
+
   rabbitmq:
     container_name: rabbitmq
     image: rabbitmq:3.11-management
@@ -34,3 +35,15 @@ services:
       "up"
     ]
     restart: on-failure
+
+  goapp:
+    restart: always
+    build: .
+    container_name: orders-app
+    depends_on:
+      - mysql
+      - rabbitmq
+    ports:
+      - "8000:8000"
+      - "50051:50051"
+      - "8080:8080"

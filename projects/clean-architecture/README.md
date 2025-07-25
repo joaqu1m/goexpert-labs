@@ -4,15 +4,11 @@ Comece executando, comando por comando:
 
 ```bash
 docker-compose up -d
+# ou
+docker-compose up -d --build
 ```
 
-```bash
-go mod tidy
-```
-
-```bash
-go run cmd/orders/main.go
-```
+_Tenha em mente que, mesmo após a inicialização dos serviços, ainda demoram alguns segundos até que tudo esteja pronto para uso_
 
 ## Agora, realize as operações de listagem e criação de pedidos pelos seguintes entrypoints:
 

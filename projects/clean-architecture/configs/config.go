@@ -21,7 +21,6 @@ type confs struct {
 }
 
 func LoadConfig() error {
-	viper.SetConfigName("app_config")
 	viper.SetConfigType("env")
 	viper.AddConfigPath(".")
 	viper.SetConfigFile(".env")
