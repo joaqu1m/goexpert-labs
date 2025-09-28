@@ -1,0 +1,49 @@
+version: '3.8'
+services:
+  otel-collector:
+    networks:
+      - otel-network
+    image: otel/opentelemetry-collector:latest
+    container_name: otel-collector
+    volumes:
+      - ./otel-collector-config.yaml:/etc/otel-collector-config.yaml
+    command: ["--config=/etc/otel-collector-config.yaml"]
+    ports:
+      - "4318:4318" # OTLP HTTP
+
+  zipkin:
+    image: openzipkin/zipkin:2.23
+    container_name: zipkin
+    ports:
+      - "9411:9411"
+    networks:
+      - otel-network
+
+  service-a:
+    build: ./service-a
+    container_name: service-a
+    depends_on:
+      - service-b
+      - otel-collector
+    ports:
+      - "8085:8080"   # altera para 8085 no host
+    networks:
+      - otel-network
+  service-b:
+    build: ./service-b
+    container_name: service-b
+    environment:
+      - WEATHERAPI_KEY=${WEATHERAPI_KEY}
+    depends_on:
+      - otel-collector
+      - zipkin
+    ports:
+      - "8086:8081"   # altera para 8086 no host
+    networks:
+      - otel-network
+volumes:
+  data:
+
+networks:
+  otel-network:
+    driver: bridge
