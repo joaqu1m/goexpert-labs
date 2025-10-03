@@ -19,3 +19,5 @@ curl -X POST http://localhost:8085/cep -H "Content-Type: application/json" -d '{
 ```
 
 4. Acesse o Zipkin em `http://localhost:9411/zipkin/` e veja os traces.
+
+Obrigado pela correção!
