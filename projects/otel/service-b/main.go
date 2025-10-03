@@ -8,7 +8,6 @@ import (
 	"net/http"
 	"net/url"
 	"os"
-	"strconv"
 
 	"github.com/joho/godotenv"
 	"go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
@@ -116,13 +115,12 @@ func handleZipcode(w http.ResponseWriter, r *http.Request) {
 	tempC := wea.Current.TempC
 	tempF := tempC*1.8 + 32
 	tempK := tempC + 273
-	out := map[string]string{
-		"temp_C": strconv.FormatFloat(tempC, 'f', 1, 64),
-		"temp_F": strconv.FormatFloat(tempF, 'f', 1, 64),
-		"temp_K": strconv.FormatFloat(tempK, 'f', 1, 64),
+	out := map[string]any{
+		"city":   via.Localidade,
+		"temp_C": tempC,
+		"temp_F": tempF,
+		"temp_K": tempK,
 	}
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(out)
 }
-
-var ErrNotFound = fmt.Errorf("not found")
